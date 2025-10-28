@@ -1,0 +1,7 @@
+#corpo{
+    text-align: center;
+}
+#cont{
+    display: flex;
+    justify-content: center;
+}

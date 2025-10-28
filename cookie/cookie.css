@@ -1,0 +1,35 @@
+#contador{
+    color: aliceblue;
+}
+#imagem{
+    width: 300px;
+    animation: girar-cookie 10s linear infinite;
+}
+#container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#corpo{
+    background-image: url("BgBlack.jpg");
+    background-size: 50%;
+    animation: mover-fundo 10s linear infinite;
+}
+
+@keyframes mover-fundo{
+    0%{
+        background-position: 0% 0;
+    }
+    100%{
+        background-position: 100% 0;
+    }
+}
+
+@keyframes girar-cookie{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
