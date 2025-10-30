@@ -3,6 +3,7 @@ import * as saudacao from "./saudacao.js"
 import * as geometria from "./geometria.js"
 import * as manipulador from "./manipulador.js"
 import * as conversor from "./conversor.js"
+import { error } from "console"
 
 console.log(calculadora.multiplicar(10, 5))
 console.log(calculadora.dividir(10, 5))
@@ -22,3 +23,15 @@ console.log(manipulador.contarcaracteres("nikolas"))
 
 console.log(conversor.celsiusparafahrenheit(25))
 console.log(conversor.quilosparalibras(10))
+
+import * as fs from "fs"
+fs.readFile("./texto.txt", "utf-8", (erro, data) => {
+    if(erro){
+        console.log("deu merda")
+        return
+    }
+    console.log(data)
+})
+fs.writeFile("./saida.txt", "olá alunos!", (err) => {
+    
+})
