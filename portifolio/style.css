@@ -1,32 +1,36 @@
 :root{
-    --cor-primaria: #4C5454;
-    --cor-secundaria: #FF715B;
-    --cor-terciaria: #FFFFFF;
+    --cor-primaria: #232C33;
+    --cor-secundaria: #5A7D7C;
+    --cor-terciaria: #DADFF7;
+    --cor-terciaria-sombra: #565863;
 }
 
 body{
-    background-color: var(--cor-primaria);
+    background-color: var(--cor-secundaria);
     margin: 0%;
 }
 
 header{
-    background-color: var(--cor-terciaria);
+    background-color: var(--cor-primaria);
     width: 100vw;
     height: 50px;
     position: fixed;
     top: 0;
+    border-bottom: 1px solid var(--cor-terciaria);
 }
 
 main{
     background-color: var(--cor-secundaria);
+    padding: 50px 0px;
 }
 
 footer{
-    background-color: var(--cor-terciaria);
+    background-color: var(--cor-primaria);
     width: 100vw;
     height: 35px;
     position: fixed;
     bottom: 0%;
+    border-top: 1px solid var(--cor-terciaria);
 }
 
 .cabeçalho{
@@ -46,6 +50,15 @@ footer{
     margin: 0px 20px;
 }
 
+a{
+    padding: 20px;
+    color: var(--cor-terciaria);
+}
+
+.creditos{
+    color: var(--cor-terciaria);
+}
+
 #sobre-mim{
     margin-top: 100px;
     display: flex;
@@ -53,7 +66,53 @@ footer{
     gap: 50px;
 }
 
-.foto, .texto{
-    border: 1px solid black;
-    border-radius: 50px;
+.texto{
+    padding: 20px;
+    background-color: var(--cor-primaria);
+    color: var(--cor-terciaria);
+}
+
+.texto, #minha-foto{
+    border: 2px solid black;
+    border-radius: 20px;
+
+    box-shadow: 10px 10px 10px var(--cor-terciaria-sombra);
+}
+
+.itens{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+}
+
+.item{
+    border: 2px solid black;
+    width: 200px;
+    height: 200px;
+    background-color: var(--cor-primaria);
+    border-radius: 20px;
+    box-shadow: 10px 10px 10px var(--cor-terciaria-sombra);
+    padding: 20px;
+    color: var(--cor-terciaria);
+}
+
+.formulario{
+    display: flex;
+    justify-content: center;
+}
+
+input{
+    width: 100px;
+    height: 30px;
+}
+
+textarea{
+    resize: none;
+    width: 240px;
+    height: 100px;
+}
+
+button{
+
 }
