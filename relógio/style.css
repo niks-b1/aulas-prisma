@@ -1,7 +1,7 @@
 :root{
     --cor-primaria: rgb(37, 37, 37);
-    --cor-secundaria: rgb(159, 250, 220);
-    --cor-efeito: rgb(121, 249, 253);
+    --cor-secundaria: rgb(102, 183, 221);
+    --cor-efeito: rgb(28, 98, 202);
 }
 
 *{
@@ -26,16 +26,17 @@ h1{
 }
 
 p{
+    color: aliceblue;
     font-size: 4em;
+    border: 2px solid var(--cor-secundaria);
+    border-radius: 20px;
+    padding: 20px;
+
+    box-shadow: 5px 5px 5px var(--cor-efeito);
 }
 
 .relogio, .cronometro{
-    border: 2px solid rgb(159, 250, 220);
-    border-radius: 20px;
-    padding: 20px;
     text-align: center;
-
-    box-shadow: 0px 0px 10px 10px;
 }
 
 button{
