@@ -31,7 +31,67 @@ function atualizarcronometro(){
         tempo_cronometro[0]++
     }
 
-    cronometro.innerText = tempo_cronometro[0].toString().padStart(2, "0") + ":" + tempo_cronometro[1].toString().padStart(2, "0") + ":" + tempo_cronometro[2].toString().padStart(2, "0")
+    cronometro.innerText = tempo_cronometro[0].toString().padStart(2, "0") + ":" + tempo_cronometro[1].toString().padStart(2, "0")
+     + ":" + tempo_cronometro[2].toString().padStart(2, "0")
 }
 
-setInterval(atualizarcronometro, 1000)
+let ativo = false
+let id
+parar.style.display = "none"
+zerar.style.display = "none"
+
+iniciar.addEventListener("click", () => {
+    if(ativo == false){
+        id = setInterval(atualizarcronometro, 1000)
+    }
+    ativo = true
+    parar.style.display = "inline"
+    zerar.style.display = "inline"
+    iniciar.style.display = "none"
+})
+
+parar.addEventListener("click", () => {
+    clearInterval(id)
+    ativo = false
+    iniciar.innerText = "continuar"
+    parar.style.display = "none"
+    iniciar.style.display = "inline"
+})
+
+zerar.addEventListener("click", () => {
+    tempo_cronometro = [0, 0, 0]
+    cronometro.innerText = "00:00:00"
+    iniciar.innerText = "iniciar"
+    if(ativo == false){
+        zerar.style.display = "none"
+    }
+})
+
+let temporizador = document.getElementById("temporizador")
+let tempo = document.getElementById("tempo")
+let botao = document.getElementById("botao")
+
+let tempo_temporizador
+function atualizartemporizador(){
+    tempo_temporizador[2]--
+    
+    if(tempo_temporizador[2] == -1){
+        tempo_temporizador[2] = 59 
+        tempo_temporizador[1] --
+    }
+    if(tempo_temporizador[1] == -1){
+        tempo_temporizador[1] = 59 
+        tempo_temporizador[0] --
+    }
+    temporizador.innerText = tempo_temporizador[0].toString().padStart(2, "0") + ":" + tempo_temporizador[1].toString().padStart(2, "0")
+     + ":" + tempo_temporizador[2].toString().padStart(2, "0")
+}
+
+let ativo_temporizador = false
+botao.addEventListener("click", () => {
+    if(ativo_temporizador == false){
+        tempo_temporizador = [0, tempo.value, 0]
+        setInterval(atualizartemporizador, 1000)
+        ativo_temporizador = true
+    }
+})

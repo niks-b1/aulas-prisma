@@ -45,8 +45,19 @@ button{
     border-radius: 20px;
     background-color: var(--cor-primaria);
     cursor: pointer;
+    margin: 20px;
 }
 
 button:hover{
     background-color: var(--cor-efeito);
+}
+
+#iniciar{
+    color: aliceblue;
+}
+#parar{
+    color: aliceblue;
+}
+#zerar{
+    color: aliceblue;
 }
