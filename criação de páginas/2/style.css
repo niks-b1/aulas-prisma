@@ -1,0 +1,17 @@
+body{
+    background-color: rgb(49, 49, 49);
+    display: flex;
+    justify-content: center;
+    margin-top: 300px;
+}
+
+#titulo{
+    color: aliceblue;
+}
+#lista{
+    color: aliceblue;
+}
+
+li{
+    cursor: pointer;
+}

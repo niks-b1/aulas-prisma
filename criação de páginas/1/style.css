@@ -2,6 +2,7 @@ body{
     background-color: rgb(49, 49, 49);
     display: flex;
     justify-content: center;
+    margin-top: 300px;
 }
 
 #sobre-mim{
