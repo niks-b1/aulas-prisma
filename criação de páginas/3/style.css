@@ -2,5 +2,13 @@ body{
     background-color: rgb(49, 49, 49);
     display: flex;
     justify-content: center;
-    margin-top: 300px;
+}
+
+#zoom{
+    width: 782px;
+}
+
+#fotos img{
+    width: 150px;
+    border: 2px solid black;
 }

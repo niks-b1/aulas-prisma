@@ -2,5 +2,17 @@ body{
     background-color: rgb(49, 49, 49);
     display: flex;
     justify-content: center;
-    margin-top: 300px;
+    text-align: center;
+}
+h1{
+    color: aliceblue;
+}
+p{
+    color: aliceblue;
+    font-size: 4em;
+    border: 2px solid ;
+    border-radius: 20px;
+    padding: 20px;
+
+    box-shadow: 5px 5px 5px;
 }
