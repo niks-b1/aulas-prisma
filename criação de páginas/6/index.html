@@ -3,34 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>validador de cadastro</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <h1>login simples</h1>
-    <form action="login" method="post">
+    <form>
         <fieldset>
             <label>nome: </label>
-            <input type="text" name="nome" placeholder="digite seu nome">
+            <input type="text" id="nome" placeholder="digite seu nome">
         </fieldset>
         <fieldset>
             <label>sobrenome: </label>
-            <input type="text" name="sobrenome" placeholder="digite seu sobrenome">
+            <input type="text" id="sobrenome" placeholder="digite seu sobrenome">
         </fieldset>
         <fieldset>
             <label>email: </label>
-            <input type="email">
+            <input type="email" id="email">
         </fieldset>
         <fieldset>
             <label>senha: </label>
-            <input type="password">
+            <input type="password" id="senha">
         </fieldset>
         <fieldset>
             <label>data de nascimento: </label>
-            <input type="date">
+            <input type="date" id="data">
         </fieldset>
-        <button type="submit">enviar</button>
-        <button type="reset">limpar</button>
+        <div> 
+            <button type="submit">enviar</button>
+            <button type="reset">limpar</button>
+        </div>
+        <p></p>
+    </form>
 </body>
 <script src="script.js"></script>
 </html>
