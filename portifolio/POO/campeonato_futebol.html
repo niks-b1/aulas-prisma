@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>simulador campeonato de futebol</title>
+    <link rel="stylesheet" href="campeonato_futebol.css">
+</head>
+<body>
+    <h1 id="titulo">CAMPEONATO DE FUTEBOL</h1>
+    <div class="div">
+        <h2>Cadastrar time</h2>
+        <input type="text" id="nomedotime" placeholder="nome do time">
+        <button id="adicionar">adicionar</button>
+    </div><br><br>
+    <div class="div">
+        <h2>Registrar partida</h2>
+        <select id="casa"></select>
+        <select id="visitante"></select><br><br>
+        <input type="number" class = "gols" placeholder="gols casa">
+        <input type="number" class = "gols" placeholder="gols visitante">
+        <button>registrar</button>
+    </div><br><br>
+    <div class="div">
+        <h2>Tabela de classificação</h2>
+        <table>
+            <tr>
+                <th>Time</th>
+                <th>Pontos</th>
+                <th>Vitória</th>
+                <th>Empates</th>
+                <th>Derrotas</th>
+                <th>Gols marcados</th>
+                <th>Gols sofridos</th>
+                <th>Saldo de gols</th>
+            </tr>
+        </table>
+    </div>
+</body>
+<script src="campeonato_futebol.js"></script>
+</html>

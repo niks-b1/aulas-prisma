@@ -1,0 +1,27 @@
+body{
+    background-color: #ececec;
+}
+.div{
+    box-shadow: 0px 0px 5px 2px rgb(110, 110, 110);
+    border-radius: 5px;
+    padding: 20px;
+    background-color: white;
+}
+select{
+    min-width: 60px;
+}
+.gols{
+    width: 116px;
+}
+table{
+    border-collapse: collapse;
+    width: 100%;
+}
+th, td{
+    border: 1px solid rgb(48, 48, 48);
+    padding: 10px;
+}
+th{
+    background-color: #ececec;
+    text-align: left;
+}
