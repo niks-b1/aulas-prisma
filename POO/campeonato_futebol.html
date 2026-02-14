@@ -8,22 +8,25 @@
 </head>
 <body>
     <h1 id="titulo">CAMPEONATO DE FUTEBOL</h1>
+    
     <div class="div">
         <h2>Cadastrar time</h2>
         <input type="text" id="nomedotime" placeholder="nome do time">
         <button id="adicionar">adicionar</button>
     </div><br><br>
+    
     <div class="div">
         <h2>Registrar partida</h2>
         <select id="casa"></select>
         <select id="visitante"></select><br><br>
-        <input type="number" class = "gols" placeholder="gols casa">
-        <input type="number" class = "gols" placeholder="gols visitante">
-        <button>registrar</button>
+        <input type="number" id="golsCasa" class = "gols" placeholder="gols casa">
+        <input type="number" id="golsVisitante" class = "gols" placeholder="gols visitante">
+        <button id="registrar">registrar</button>
     </div><br><br>
+    
     <div class="div">
         <h2>Tabela de classificação</h2>
-        <table>
+        <table id="tabela">
             <tr>
                 <th>Time</th>
                 <th>Pontos</th>
@@ -37,5 +40,6 @@
         </table>
     </div>
 </body>
+
 <script src="campeonato_futebol.js"></script>
 </html>

@@ -8,7 +8,7 @@ class Time{
         this.nome = nome
     }
     calcularpontos(){
-        return this.vitoria *3 + this.empate + " pontos"
+        return this.vitoria *3 + this.empate
     }
     calcularsaldo(){
         return this.golsmarcados - this.golssofridos
@@ -54,7 +54,35 @@ let campeonato = new Campeonato()
 let input = document.getElementById("nomedotime")
 let botaotime = document.getElementById("adicionar")
 
+function timenatabela(){
+    let tabela = document.getElementById("tabela")
+    let novalinha = document.createElement("tr")
+    let timeatual = campeonato.times[campeonato.times.length -1]
+    novalinha.innerHTML = 
+        "<td>" + timeatual.nome + "</td>" +
+        "<td>" + timeatual.calcularpontos() + "</td>" +
+        "<td>" + timeatual.vitoria + "</td>" +
+        "<td>" + timeatual.empate + "</td>" +
+        "<td>" + timeatual.derrota + "</td>" +
+        "<td>" + timeatual.golsmarcados + "</td>" +
+        "<td>" + timeatual.golssofridos + "</td>" +
+        "<td>" + timeatual.calcularsaldo() +"</td>"
+    console.log(novalinha);
+    tabela.appendChild(novalinha)
+    
+}
+function atualizaOpcoes(){
+    let selecionarcasa = document.getElementById("casa")
+    let selecionarvisitante = document.getElementById("visitante")
+
+}
+
 botaotime.addEventListener("click", () => {
     campeonato.adicionartime(input.value)
     console.log(campeonato);
+    timenatabela()
+    atualizaOpcoes()
+    input.value = ""
 })
+
+
