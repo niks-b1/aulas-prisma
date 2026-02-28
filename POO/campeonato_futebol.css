@@ -25,3 +25,8 @@ th{
     background-color: #ececec;
     text-align: left;
 }
+
+.alerta{
+    color: red;
+    font-size: small;
+}
