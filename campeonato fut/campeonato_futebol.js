@@ -46,6 +46,7 @@ class Campeonato{
         this.times.push(novotime)
     }
     obtertabela(){
+        
         return(times)
     }
 }
