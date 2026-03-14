@@ -46,8 +46,16 @@ class Campeonato{
         this.times.push(novotime)
     }
     obtertabela(){
-        
-        return(times)
+        this.times = this.times.sort((a, b) => {
+            if (b.calcularpontos !== a.calcularpontos){
+                return b.calcularpontos - a.calcularpontos;
+            }
+            if (b.vitoria !== a.vitoria){
+                return b.vitoria - a.vitoria;           
+            }
+            return b.calcularsaldo - a.calcularsaldo;
+        })
+        return this.times;
     }
 }
 let campeonato = new Campeonato()
@@ -56,6 +64,7 @@ let tabela = document.getElementById("tabela")
 let timeatual = campeonato.times[campeonato.times.length -1]
 function atualizartabela(){
     tabela.innerHTML = "<tr><th>Time</th><th>Pontos</th><th>Vitória</th><th>Empates</th><th>Derrotas</th><th>Gols marcados</th><th>Gols sofridos</th><th>Saldo de gols</th></tr>"
+    campeonato.obtertabela()
     for(let contador = 0;contador < campeonato.times.length;contador ++){
         let novalinha = document.createElement("tr")
         novalinha.innerHTML = 
