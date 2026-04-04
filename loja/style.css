@@ -1,0 +1,66 @@
+#telaLogin, #telaLoja, #telaAdmin{
+    min-height: 100vh;
+}
+
+#telaLogin{
+    background-color: lightslategray;
+
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#telaLoja{
+    background-color: rgb(207, 134, 111);
+}
+
+#telaAdmin{
+    background-color: lightgreen;
+}
+
+#cadastrar, #logar{
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    gap: 10px;
+
+    width: fit-content;
+    padding: 10px;
+    background-color: antiquewhite;
+
+    border-radius: 20px;
+    box-shadow: 5px 5px 5px red;
+}
+
+#lista-de-produtos{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.produto{
+    background-color: lightblue;
+    width: 400px;
+    box-shadow: 5px 5px 5px lightskyblue;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin: 10px;
+}
+
+h3, h4{
+    margin: 0;
+}
+
+.fotoProduto{
+    width: 150px;
+    height: 150px;
+}
+
+.categoriaProduto{
+    background-color: blue;
+    color: white;
+    border-radius: 5px;
+    padding: 5px;
+    width: fit-content;
+}

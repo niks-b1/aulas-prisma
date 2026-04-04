@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>loja do nik</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+
+    </header>
+
+    <main>
+        <div id="telaLogin" class="tela">
+            <div id="cadastrar">
+                <h1>cadastrar</h1>
+                nome: <input type="text" id="cadNome">
+                email: <input type="email" id="cadEmail">
+                senha: <input type="password" id="cadSenha">
+                confirmar senha: <input type="password" id="cadConfirmarSenha">
+                <button id="cadBotao">cadastrar</button>
+            </div>
+            <div id="logar">
+                <h1>entrar</h1>
+                email: <input type="email" id="loginEmail">
+                senha: <input type="password" id="loginSenha">
+                <button id="loginBotao">entrar</button>
+            </div>
+        </div>
+
+        <div id="telaLoja" class="tela">
+            <h1>loja do nikolas</h1>
+            <h2>lista de produtos</h2>
+            <div id="lista-de-produtos">
+                <div class="produto">
+                    <img class="fotoProduto" src="https://ae-pic-a1.aliexpress-media.com/kf/Sb02aac6a88b44fa18db8f97f14f80fdfm.jpg_220x220q75.jpg_.avif" alt="foto boné Bob Esponja">
+                    <h3 class="nomeProduto">boné do Bob Esponja</h3>
+                    <h4 class="categoriaProduto">bonés</h4>
+                    <h3 class="precoProduto">R$30</h3>
+                </div>
+                <div class="produto">
+                    <img class="fotoProduto" src="https://img.lojasrenner.com.br/item/928455176/original/3.jpg" alt="foto camisa Sonic">
+                    <h3 class="nomeProduto">camisa do Sonic</h3>
+                    <h4 class="categoriaProduto">camisas</h4>
+                    <h3 class="precoProduto">R$50</h3>
+                </div>
+                <div class="produto">
+                    <img class="fotoProduto" src="https://down-br.img.susercontent.com/file/br-11134207-7r98o-ly6rp6l0nt79f9" alt="foto crocs Relâmpago Macqueen">
+                    <h3 class="nomeProduto">crocs do Relâmpago Macqueen</h3>
+                    <h4 class="categoriaProduto">calçados</h4>
+                    <h3 class="precoProduto">R$120</h3>
+                </div>
+                <div class="produto">
+                    <img class="fotoProduto" src="" alt="">
+                    <h3 class="nomeProduto"></h3>
+                    <h4 class="categoriaProduto"></h4>
+                    <h3 class="precoProduto"></h3>
+                </div>
+            </div>
+        </div>
+
+        <div id="telaAdmin" class="tela">
+            <h1>administrador loja nikolas</h1>
+            <div id="cadastrarProduto">
+                nome: <input type="text">
+                categoria: <input type="text">
+                foto: <input type="file">
+                preço: <input type="number">
+                <button>cadastrar produto</button>
+            </div>
+            <h2>lista de produtos</h2>
+            <div id="listaProdutosAdmin">
+
+            </div>
+        </div>
+    </main>
+
+    <footer>
+
+    </footer>
+</body>
+</html>
+<script src="script.js"></script>
