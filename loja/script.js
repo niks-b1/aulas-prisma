@@ -1,16 +1,21 @@
-function trocartela(tela){
+function trocartela(nometela){
     let telas = document.querySelectorAll(".tela")
+    console.log(telas);
     
-    for(let i = 1; i < telas.length; i++){
+    for(let i = 0; i < telas.length; i++){
         telas[i].style.display = "none"
     }
-
-    let tela = document.getElementById(tela)
-    tela.style.display = "block"
+    
+    let tela = document.getElementById(nometela)
+    tela.style.display = "flex"
 }
 
+trocartela("telaLogin")
 
 class Usuario{
+
+    destino = "telaLoja"
+
     constructor(nome, email, senha){
         this.nome = nome
         this.email = email
@@ -20,7 +25,7 @@ class Usuario{
     verificaLogin(emailtestado, senhatestada){
         if(this.email == emailtestado && this.senha == senhatestada){
             console.log("confirma login");
-            return true
+            return this.destino
         }
         else{
             console.log("email ou senha incorretos");
@@ -30,6 +35,9 @@ class Usuario{
 }
 
 class Admin extends Usuario{
+
+    destino = "telaAdmin"
+
     cadastrarProdutos(){
         console.log("cadastrando produto");
         
@@ -46,15 +54,46 @@ class Loja{
 
     logar(emailtestado, senhatestada){
         for(let i = 0; i < this.usuarios.length; i++){
-            let login = this.usuarios[i].verificaLogin(emailtestado, senhatestada)
-            if(login == true){
-                trocartela("telaLoja")
+            let destino = this.usuarios[i].verificaLogin(emailtestado, senhatestada)
+            if(destino != false){
+                trocartela(destino)
+                return
             }
         }
     }
 }
 
-let loja = new Loja
+class Produto{
+    constructor(nome, valor, categoria, imagem){
+        this.nome = nome
+        this.valor = valor
+        this.categoria = categoria
+        this.imagem = imagem
+    }
+
+    exibirProduto(){
+
+        let produto = document.createElement("div")
+        produto.classList.add("produto")
+
+        produto.innerHTML = `<img class="fotoProduto" src="${this.imagem}" alt="foto ${this.nome}"> 
+                            <h3 class="nomeProduto">${this.nome}</h3> 
+                            <h4 class="categoriaProduto">${this.categoria}</h4> 
+                            <h3 class="precoProduto">${this.valor}</h3>`
+        
+        let listaprodutos = document.getElementById("lista-de-produtos")
+        listaprodutos.appendChild(produto)
+    }
+
+    
+    exibirProdutoAdmin(){
+
+    }
+}
+
+let loja = new Loja()
+let admin = new Admin("Admin", "a@a", "admin")
+loja.adcionarusuario(admin)
 
 let cadnome = document.getElementById("cadNome")
 let cademail = document.getElementById("cadEmail")
@@ -67,12 +106,37 @@ cadbotao.addEventListener("click", () => {
         alert("não é possível cadastrar usuário sem nome")
         return
     }
+
+    if(cadsenha.value != cadconfirmarsenha.value){
+        alert("As senhas devem ser iguais")
+        return
+    }
+
+    let existe = loja.usuarios.find(user => user.email == cademail.value)
+    if(existe != null){
+        alert("email já está cadastrado")
+        return
+    }
+
     let novousuario = new Usuario(cadnome.value, cademail.value, cadsenha.value)
 
     loja.adcionarusuario(novousuario)
+
+    cadnome.value = ""
+    cademail.value = ""
+    cadsenha.value = ""
+    cadconfirmarsenha.value = ""
 })
 
 let loginemail = document.getElementById("loginEmail")
 let loginsenha = document.getElementById("loginSenha")
 let loginbotao = document.getElementById("loginBotao")
 
+loginbotao.addEventListener("click", () => {
+    if(loginemail.value == "" || loginsenha.value == ""){
+        alert("É necessário preencher email e senha para fazer o login")
+        return
+    }
+
+    loja.logar(loginemail.value, loginsenha.value)
+})
