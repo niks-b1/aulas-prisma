@@ -1,0 +1,14 @@
+{
+    "usuario":{
+        "nome": "davi",
+        "email": "d@d",
+        "senha": 123,
+        "endereco":{
+            "estado": "ES",
+            "cidade": "Vitoria",
+            "rua": "fulano de tal"
+        },
+        "pessoa com deficiencia": false,
+        "conatato": ["27999999999", "27987654321"]
+    }
+}

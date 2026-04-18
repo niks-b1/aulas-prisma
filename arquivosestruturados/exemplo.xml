@@ -1,0 +1,12 @@
+<listausuarios>
+    <usuario>
+        <nome>nikolas</nome>
+        <email>n@n</email>
+        <senha>123</senha>
+    </usuario>
+    <usuario>
+        <nome>lucas</nome>
+        <senha>321</senha>
+        <telefone>27 999123456</telefone>
+    </usuario>
+</listausuarios>
