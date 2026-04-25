@@ -140,3 +140,17 @@ loginbotao.addEventListener("click", () => {
 
     loja.logar(loginemail.value, loginsenha.value)
 })
+
+let logar = document.getElementById("logar")
+let cadastrar = document.getElementById("cadastrar")
+let span = document.getElementById("span")
+let p = document.getElementById("p")
+
+logar.style.display = "none"
+
+span.addEventListener("click", () => {
+    cadastrar.style.display = "none"
+    logar.style.display = "inline"
+    p.innerText = "novo usuário?"
+    span.innerHTML = "Cadastre-se aqui"
+})

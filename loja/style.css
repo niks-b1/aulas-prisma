@@ -1,21 +1,31 @@
+:root{
+    --cor-1: #6c788e;
+    --cor-2: #a6aec1;
+    --cor-3: #cfd5e1;
+    --cor-4: #ededf2;
+}
+
+
 #telaLogin, #telaLoja, #telaAdmin{
     min-height: 100vh;
 }
 
 #telaLogin{
-    background-color: lightslategray;
+    background-color: var(--cor-2);
+    color: var(--cor-4);
 
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
+    flex-direction: column;
     align-items: center;
 }
 
 #telaLoja{
-    background-color: rgb(207, 134, 111);
+    background-color: var(--cor-2);
 }
 
 #telaAdmin{
-    background-color: lightgreen;
+    background-color: var(--cor-2);
 }
 
 #cadastrar, #logar{
@@ -25,11 +35,11 @@
     gap: 10px;
 
     width: fit-content;
-    padding: 10px;
-    background-color: antiquewhite;
+    padding: 60px;
+    background-color: var(--cor-1);
 
     border-radius: 20px;
-    box-shadow: 5px 5px 5px red;
+    box-shadow: 5px 5px 5px #5c6679;
 }
 
 #lista-de-produtos{
@@ -63,4 +73,9 @@ h3, h4{
     border-radius: 5px;
     padding: 5px;
     width: fit-content;
+}
+
+#span{
+    cursor: pointer;
+    color: #20304d;
 }
