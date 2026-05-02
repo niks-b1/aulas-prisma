@@ -1,0 +1,28 @@
+[
+  {
+    "id": 1,
+    "titulo": "The Witcher 3",
+    "preco": 99.90,
+    "plataformas": ["PC", "PlayStation", "Xbox"],
+    "emEstoque": true
+  },
+  {
+    "id": 2,
+    "titulo": "Cyberpunk 2077",
+    "preco": 149.90,
+    "plataformas": ["PC", "PlayStation", "Xbox"],
+    "emEstoque": false
+  },
+  {
+    "id": 3,
+    "titulo": "God of War",
+    "preco": 199.90,
+    "plataformas": ["PlayStation", "PC"],
+    "emEstoque": true
+  }
+
+  
+]
+
+
+
