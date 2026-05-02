@@ -145,12 +145,23 @@ let logar = document.getElementById("logar")
 let cadastrar = document.getElementById("cadastrar")
 let span = document.getElementById("span")
 let p = document.getElementById("p")
+let C = true
 
 logar.style.display = "none"
 
 span.addEventListener("click", () => {
-    cadastrar.style.display = "none"
-    logar.style.display = "inline"
-    p.innerText = "novo usuário?"
-    span.innerHTML = "Cadastre-se aqui"
+    if(C == true){
+        cadastrar.style.display = "none"
+        logar.style.display = "flex"
+        p.innerText = "novo usuário?"
+        span.innerHTML = "Cadastre-se aqui"
+        C = false
+    }
+    else if(C == false){
+        cadastrar.style.display = "flex"
+        logar.style.display = "none"
+        p.innerText = "já tem uma conta?"
+        span.innerHTML = "Fazer login"
+        C = true
+    }
 })
