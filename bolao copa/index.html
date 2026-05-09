@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>projeto bolao copa</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <h1>Bolão da Copa</h1>
+  </header>
+
+  <main class="container">
+    <!-- Grupos -->
+    <section aria-labelledby="grupos-title" class="grupos-section">
+      <h3 id="grupos-title" style="margin:0 0 10px 0">Grupos</h3>
+      <div class="grupos" id="grupos">
+        <div class="grupo">
+          <h2>Grupo A</h2>
+          <ul>
+            <li>Brasil</li>
+            <li>Sérvia</li>
+            <li>Suíça</li>
+            <li>Camarões</li>
+          </ul>
+        </div>
+        <div class="grupo">
+          <h2>Grupo B</h2>
+          <ul>
+            <li>Portugal</li>
+            <li>Gana</li>
+            <li>Uruguai</li>
+            <li>Coreia do Sul</li>
+          </ul>
+        </div>
+        <div class="grupo">
+          <h2>Grupo C</h2>
+          <ul>
+            <li>Argentina</li>
+            <li>Arábia Saudita</li>
+            <li>Polônia</li>
+            <li>México</li>
+          </ul>
+        </div>
+        <!-- Adicione mais grupos conforme necessário -->
+      </div>
+    </section>
+
+    <!-- Partidas -->
+    <section class="partidas" aria-labelledby="partidas-title">
+      <h3 id="partidas-title" style="margin:0 0 10px 0">Partidas Grupo A</h3>
+
+      <!-- Exemplo de partida -->
+      <div class="partida" data-match-id="A1" data-group="Grupo A" data-home="Brasil" data-away="Sérvia">
+        <div class="info">
+          <p><strong>Brasil</strong> x <strong>Sérvia</strong> — 12/11</p>
+        </div>
+        <div>
+          <button class="open-bolao">Criar Bolão</button>
+        </div>
+      </div>
+
+      <div class="partida" data-match-id="A2" data-group="Grupo A" data-home="Suíça" data-away="Camarões">
+        <div class="info">
+          <p><strong>Suíça</strong> x <strong>Camarões</strong> — 12/11</p>
+        </div>
+        <div>
+          <button class="open-bolao">Criar Bolão</button>
+        </div>
+      </div>
+
+      <div class="partida" data-match-id="A3" data-group="Grupo A" data-home="Brasil" data-away="Camarões">
+        <div class="info">
+          <p><strong>Brasil</strong> x <strong>Camarões</strong> — 13/11</p>
+        </div>
+        <div>
+          <button class="open-bolao">Criar Bolão</button>
+        </div>
+      </div>
+
+      <div class="partida" data-match-id="A4" data-group="Grupo A" data-home="Sérvia" data-away="Suíça">
+        <div class="info">
+          <p><strong>Sérvia</strong> x <strong>Suíça</strong> — 22/11</p>
+        </div>
+        <div>
+          <button class="open-bolao">Criar Bolão</button>
+        </div>
+      </div>
+
+      <div class="partida" data-match-id="A5" data-group="Grupo A" data-home="Camarões" data-away="Sérvia">
+        <div class="info">
+          <p><strong>Camarões</strong> x <strong>Sérvia</strong> — 22/11</p>
+        </div>
+        <div>
+          <button class="open-bolao">Criar Bolão</button>
+        </div>
+      </div>
+
+      <div class="partida" data-match-id="A6" data-group="Grupo A" data-home="Suíça" data-away="Brasil">
+        <div class="info">
+          <p><strong>Suíça</strong> x <strong>Brasil</strong> — 22/11</p>
+        </div>
+        <div>
+          <button class="open-bolao">Criar Bolão</button>
+        </div>
+      </div>
+
+      <!-- Adicione outras partidas conforme necessário -->
+    </section>
+
+    <!-- Tabela explicativa de pontuação -->
+    <section class="tabela-card" aria-labelledby="tabela-title">
+      <h3 id="tabela-title" style="margin:0 0 10px 0">Como os acertos do bolão funcionam</h3>
+      <p style="margin:0 0 12px 0;color:var(--muted)">Resumo das regras de pontuação aplicadas ao bolão.</p>
+      <table>
+        <thead>
+          <tr>
+            <th>Palpite</th>
+            <th>Placar Real</th>
+            <th>Explicação</th>
+            <th>Total</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>2 x 0</td>
+            <td>2 x 0</td>
+            <td>Acertou tudo: vencedor + 2 gols exatos + bônus</td>
+            <td class="total">5 pts</td>
+          </tr>
+          <tr>
+            <td>2 x 1</td>
+            <td>1 x 0</td>
+            <td>Acertou apenas o vencedor</td>
+            <td class="total">1 pt</td>
+          </tr>
+          <tr>
+            <td>1 x 1</td>
+            <td>1 x 1</td>
+            <td>Acertou empate + 2 gols exatos + bônus</td>
+            <td class="total">5 pts</td>
+          </tr>
+          <tr>
+            <td>3 x 0</td>
+            <td>2 x 0</td>
+            <td>Acertou vencedor + gols de um time</td>
+            <td class="total">2 pts</td>
+          </tr>
+          <tr>
+            <td>0 x 0</td>
+            <td>1 x 1</td>
+            <td>Acertou apenas o empate</td>
+            <td class="total">1 pt</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Lista de palpites salvos -->
+    <section style="margin-top:14px">
+      <h3 style="margin:0 0 8px 0">Seus palpites salvos</h3>
+      <div id="savedPalpites" class="saved-list">Nenhum palpite salvo ainda.</div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Bolão da Copa — Todos os direitos reservados</p>
+  </footer>
+
+  <!-- Modal -->
+  <div id="modalBackdrop" class="modal-backdrop" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="modal" role="document" aria-labelledby="modalTitle">
+      <h4 id="modalTitle">Criar Bolão</h4>
+      <p id="modalMatch" style="margin:6px 0 12px 0;color:var(--muted)"></p>
+
+      <form id="bolaoForm">
+        <div class="row" style="margin-bottom:8px">
+          <div class="col">
+            <label for="predHome">Seu palpite - Time da casa (gols)</label>
+            <input id="predHome" name="predHome" type="number" min="0" required />
+          </div>
+          <div class="col">
+            <label for="predAway">Seu palpite - Time visitante (gols)</label>
+            <input id="predAway" name="predAway" type="number" min="0" required />
+          </div>
+        </div>
+
+        <div style="margin-top:6px;color:var(--muted);font-size:0.9rem">
+          <strong>Opcional:</strong> informe o <em>placar real</em> para calcular a pontuação imediatamente.
+        </div>
+
+        <div class="row" style="margin-top:8px">
+          <div class="col">
+            <label for="realHome">Placar real - casa (opcional)</label>
+            <input id="realHome" name="realHome" type="number" min="0" />
+          </div>
+          <div class="col">
+            <label for="realAway">Placar real - visitante (opcional)</label>
+            <input id="realAway" name="realAway" type="number" min="0" />
+          </div>
+        </div>
+
+        <div class="actions">
+          <button type="button" class="btn secondary" id="closeModal">Cancelar</button>
+          <button type="submit" class="btn primary">Salvar palpite</button>
+        </div>
+      </form>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
